@@ -1,0 +1,1773 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #051305;
+}
+main {
+  min-height: 50vh;
+}
+
+/*** classes to be reuse ***/
+.plr-18px {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(128.03deg, #22821f 7.19%, #165514 97.03%);
+  text-transform: uppercase;
+  border: none !important;
+}
+
+.btn-gradient:hover {
+  background-image: linear-gradient(128.03deg, #165514 7.19%, #22821f 97.03%);
+}
+
+.btn-gradient-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bold-text {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.small-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.head-text {
+  font-size: 1.5rem;
+  line-height: 48px;
+}
+
+.desc-text {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.overflow {
+  overflow-x: auto;
+}
+
+/****************************/
+
+/** header **/
+.header {
+  background-color: #000;
+}
+
+.header-main {
+  padding: 0.75rem;
+}
+
+.star-logo img {
+  width: 200px;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #fff;
+}
+
+.header-loggedon .icon-img {
+  filter: invert(100%);
+}
+
+.create-button {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  margin: 1em;
+}
+
+.btn-login {
+  font-size: 14px;
+}
+
+.btn-login:hover {
+  color: #fff !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  box-shadow: none;
+  border: none;
+  background-size: 40px;
+}
+
+.navbar-toggler {
+  box-shadow: none;
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.offcanvas-header .btn-close {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(102,81,124)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M6 6L24 24M24 6L6 24'/%3e%3c/svg%3e");
+  filter: none;
+  opacity: 1;
+  background-size: 40px;
+}
+
+/** Logged on header **/
+.header-loggedon .desktop-logo {
+  width: 225px;
+}
+
+.header-loggedon .navbar-toggler-icon,
+.header-loggedon .close,
+.header-loggedon .hamburger,
+.notification-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.header-loggedon .offcanvas-backdrop.fade.show {
+  background-color: #2c0060b2;
+}
+.header-loggedon .link:hover, .header-loggedon .link.active {
+  background-image: linear-gradient(
+    116.79deg,
+    #feb05d 19.16%,
+    #22821f 53.23%,
+    #165514 87.68%
+  );
+}
+
+.header-loggedon .link-items img {
+  width: 24px;
+}
+
+.header-loggedon .link-items p {
+  margin-bottom: 0;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/*.header-loggedon .link-items a:hover,  .link-items .link.active {
+  background-image: linear-gradient(141.83deg,
+    #feb05d 22.68%,
+    #22821f 56.94%,
+    #165514 88.75%
+  );
+}*/
+
+.header-loggedon .btn-plain {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 8px 30px;
+  position: relative;
+  box-sizing: content-box;
+  text-decoration: none;
+}
+
+.header-loggedon .accordion {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.header-loggedon .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.header-loggedon .accordion-item .accordion-button {
+  border-left: 0;
+  border-right: 0;
+  box-shadow: none;
+}
+
+.header-loggedon .contact-us {
+  text-decoration: none;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.header-loggedon .log-out {
+  background: transparent;
+  text-align: left;
+  border: none;
+}
+
+.header-loggedon .switch-container {
+  background-color: #18181b;
+  border-radius: 7px;
+}
+
+.header-loggedon .switch-inner-right,
+.header-loggedon .switch-inner-left {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 36px;
+  min-width: 190px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.header-loggedon .switch-inner-left.active {
+  background-image: url("../images/scDisplay.png");
+}
+
+.header-loggedon .switch-inner-right.active {
+  background-image: url("../images/gcDisplay.png");
+}
+
+.header-loggedon .switch-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.header-loggedon .active .switch-btn {
+  color: #000;
+}
+
+.header-loggedon .switch-inner-right .switch-btn {
+  position: relative;
+  left: 7px;
+}
+
+.header-loggedon .switch-inner-left .switch-btn {
+  position: relative;
+  right: 27px;
+}
+
+.header-loggedon .switch-container .balance {
+  color: #fff;
+  font-size: 12px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.header-loggedon .switch-btn:focus {
+  outline: none;
+}
+
+.header-loggedon .balance {
+  color: #fff;
+  font-size: 12px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.header-loggedon .switch-inner-left.active .balance {
+  color: rgb(88, 196, 65);
+}
+
+.header-loggedon .switch-inner-right.active .balance {
+  color: rgb(213, 156, 21);
+}
+
+.header-loggedon .switch-inner-left,
+.header-loggedon .switch-inner-right {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 36px;
+  min-width: 190px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.switcher-mobile {
+  border: 2px solid rgb(213, 156, 21);
+  border-radius: 20px;
+}
+
+.switcher-mobile .add-coin span {
+  color: rgb(213, 156, 21);
+}
+
+.switcher-mobile .add-coin img {
+  width: 33px;
+  height: 33px;
+}
+
+/**Logged on homephe **/
+.hero-section-rightimg {
+  background-image: url("../images/banner-game-mobile.png");
+  background-size: cover;
+  min-height: 600px;
+  background-repeat: no-repeat;
+}
+
+.hero-section-rightimg .old-man {
+  bottom: 0;
+  right: 0;
+}
+
+/** footer **/
+.footer-section {
+  background-color: #000;
+}
+
+.footer-inner {
+  padding: 160px 0 80px 0;
+}
+
+.footer-section li a,
+.f-center-text p,
+.f-bottom-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.footer-section img {
+  width: 40px;
+  height: 40px;
+}
+
+/** homepage section **/
+.banner,
+.banner-allgames {
+  background-size: cover;
+  min-height: 600px;
+  background-repeat: no-repeat;
+}
+
+.banner-allgames {
+  background-image: url("../images/banner-game.png");
+}
+
+.text-wrapper {
+  min-height: 600px;
+}
+
+.text-big {
+  font-size: 48px;
+  line-height: 48px;
+  text-align: left;
+}
+
+.banner-small-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+  margin: 0;
+}
+
+.btn-sign-up a {
+  font-size: 20px;
+}
+
+.banner-right-image {
+  right: 0;
+  bottom: 0;
+}
+
+.btn-mobile a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Dive-in section */
+.game-image img {
+  width: 186px;
+  height: 178px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.star-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+}
+
+.overlay {
+  background: linear-gradient(
+    45deg,
+    rgba(62, 4, 17, 0.8),
+    rgba(42, 11, 89, 0.8)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.a-games:hover .overlay {
+  opacity: 1;
+}
+
+/* No purchase section */
+.purchase-title {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.purchase-desc {
+  font-size: 24px;
+  line-height: 26px;
+  margin-left: 1.8em;
+}
+
+.account-btn {
+  font-size: 20px;
+}
+
+.hero-section {
+  background-size: cover;
+  min-height: 600px;
+  background-repeat: no-repeat;
+}
+
+.girl-img {
+  bottom: 0;
+  left: 0;
+}
+
+.hero-section-rightimg .purchase-desc {
+  margin-left: 0;
+}
+
+/* Last Section */
+.text-wrap {
+  margin: 60px 0;
+}
+
+.highlight {
+  font-size: 24px;
+}
+
+.slot-text {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.slot-desc {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* About us page */
+.about-p {
+  color: #65507e;
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+/* Games */
+.custom-width {
+  width: 60%;
+}
+
+.banner-allgames .banner-right-image img {
+  width: 449px;
+  height: auto;
+  object-fit: contain;
+}
+
+.banner-signup-btn {
+  width: max-content;
+}
+
+/* Spinvault Common Modal Component */
+.common-modal-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 0, 96, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.popup-modal-dialog {
+  background: rgb(21, 0, 46);
+  overflow-y: auto;
+  max-width: 800px;
+  min-height: 500px;
+  max-height: 800px;
+  position: relative; 
+  margin: auto;
+}
+.common-modal-popup ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.common-modal-popup ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.common-modal-popup ::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px; 
+}
+
+
+.popup-modal-content {
+  background: transparent;
+  border: none;
+  height: 100%;
+}
+.popup-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  border: none;
+}
+.modal-close {
+  background-color: transparent;
+  border: none;
+}
+.modal-close .icon-close {
+  width: 30px;
+  height: 30px;
+}
+
+/*--- Spinvault Search Component ---*/
+.spinvault-search-modal .popup-modal-dialog {
+  background-color: transparent;
+  height: auto;
+  overflow-y: unset;
+}
+
+.spinvault-search-modal .popup-modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+
+.spinvault-search-modal .input-group .form-control {
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.spinvault-search-modal .input-group .form-control::placeholder {
+  color: white;
+}
+
+.spinvault-search-modal .popup-modal-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 4px;
+  background: linear-gradient(
+    141.83deg,
+    #feb05d 22.68%,
+    #22821f 56.94%,
+    #165514 88.75%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Promotions */
+.promotions .card { 
+  overflow: hidden;
+}
+.promotions .card-img-overlay { 
+  padding: 0;
+}
+.promotions .overlay-inner-wrap {
+  padding: 45px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .promotions .overlay-inner-wrap {
+    padding: 45px 35px 25px;
+  }
+  .promotions .overlay-inner-wrap a, 
+  .promotions .overlay-inner-wrap .btn-plain { 
+    padding: 10px; 
+  }
+}
+.promotions > p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.promotions .overlay-inner-wrap .title {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #fff;
+}
+@media screen (min-width: 1200px) {
+  .promotions .overlay-inner-wrap .title {
+    font-size: 3rem;
+  }
+} 
+
+.promotions .overlay-inner-wrap .subtitle, 
+.promotions .overlay-inner-wrap .get-coin {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.promotions .overlay-inner-wrap .coin span {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.promotions .overlay-inner-wrap a, 
+.promotions .overlay-inner-wrap .btn-plain { 
+  padding: 14px;
+}
+.promotions .popup-modal-body img {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+
+/* 404 */
+.not-found {
+  min-height: 100vh;
+}
+
+/*-- Contact --*/
+.text-main-blue {
+  color: #65507e;
+}
+
+.text-main-purple {
+  color: rgb(140 52 252);
+}
+
+input#form-field-email {
+  border: solid rgb(101 80 126) 3px !important;
+}
+
+input#form-field-email:focus {
+  color: #65507e;
+  box-shadow: none;
+  outline: auto;
+}
+
+textarea#form-field-message {
+  border: solid rgb(101 80 126) 3px !important;
+}
+
+textarea#form-field-message:focus {
+  color: #65507e;
+  box-shadow: none;
+  outline: auto;
+}
+
+.contacts {
+  min-height: auto;
+}
+.contacts h1 {
+  font-size: 3rem;
+}
+
+/** Login **/
+.border-purple {
+  border-color: #65507e;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.text-main-blue {
+  color: #65507e;
+}
+
+.bg-purple {
+  background-color: #65507e;
+}
+
+.btn-gradient:hover {
+  background-image: linear-gradient(
+    128.03deg,
+    #165514 7.19%,
+    #22821f 97.03%
+  ) !important;
+}
+
+.login {
+  min-height: auto;
+}
+
+.login h1 {
+  font-size: 3rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.login input {
+  background-color: #d9d9d9;
+}
+
+.login input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.login .side-lines {
+  height: 2px;
+  width: 100%;
+}
+
+.login .social-media img {
+  height: 40px;
+  width: 40px;
+}
+
+.social-media a {
+  background-color: #3d2856;
+}
+
+.login a.forgot-text {
+  color: #8c34fc;
+}
+
+/* Common CSS for Register & My Account Pages  Recovery Password */
+.form-common .items {
+  width: 75%; 
+  margin: auto;
+}
+.form-common label {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0px;
+}
+
+.form-common input, .form-common select {
+  font-weight: 500;
+  background-color: #d9d9d9;
+  box-shadow: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-radius: 0 !important;
+  color: rgba(33, 37, 41, 0.75) !important;
+}
+
+.form-common .form-control:disabled {
+}
+
+.toggle-password {
+  float: right;  
+  margin-right: 10px;  
+  margin-top: -36px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+label.checkbox-text,
+button.checkbox-text {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+.form-common .send-otp {
+  padding: 8px 30px;
+}
+
+.form-common input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.form-common .text-main-purple {
+  color: rgb(140 52 252);
+}
+
+.form-common .scroll-bar {
+  max-height: 480px;
+  overflow-y: scroll; 
+}
+
+.form-common .side-lines {
+  height: 2px;
+  width: 100%;
+}
+
+.form-common .social-media img {
+  height: 40px;
+  width: 40px;
+}
+
+.form-common .social-media button {
+  background-color: #3d2856;
+}
+.account-recovery-password .items {
+  width: 50%; 
+  margin: auto;
+}
+
+
+/* Custon common css for SweetAlert popup */
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #3d2856; 
+}
+.swal2-popup .swal2-icon.swal2-success .swal2-success-ring {
+  border: .25em solid #22821f;
+}
+.swal2-popup .swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: #22821f;
+}
+
+
+/** Profile page **/
+.send-otp-btn-padding {
+  padding: 0.75em 1em;
+}
+
+.left-side-inner-section-custom-width {
+  width: 96%;
+}
+
+.entries-dropdown {
+  padding-right: 100px;
+}
+
+.redeem-convert-label {
+  color: #efa73c !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: auto 0;
+}
+
+.custom-text-size {
+  font-size: 1.125rem;
+}
+
+.spinvault-my-account-container .icon-image {
+  width: 30px;
+  height: 30px;
+  margin-right: 1em;
+}
+
+.spinvault-my-account-container .tab-item a.active {
+  background-image: linear-gradient(128.03deg, #165514 7.19%, #22821f 97.03%);
+  display: block;
+}
+
+/*-- Slots --*/
+.slot-top-banner .container {
+  margin-top: 80px !important;
+}
+
+.slot-top-banner .right-section {
+  position: absolute;
+  right: 0;
+  top: -120px;
+}
+
+.slot-top-banner .right-section img {
+  width: 480px;
+  height: auto;
+}
+
+.slot-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 260px;
+  top: 50px;
+}
+
+.slot-banner .left-section {
+  width: 70%;
+}
+
+.game-list {
+  padding-top: 8rem;
+  padding-bottom: 120px;
+}
+
+.game-image img {
+  margin: auto;
+  display: block;
+}
+
+.overlay span.star {
+  font-size: 2em;
+  position: absolute;
+  color: #f2f2f2;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.mobile-menu {
+  display: none;
+}
+
+/* Search Page */
+.search {
+  min-height: 100vh;
+}
+.search form {
+  width: 75%;
+}
+.search .items {
+  width: 65%;
+}
+.search .item {
+  position: relative;
+}
+.search .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 4px;
+  background: linear-gradient(141.83deg,#feb05d 22.68%,#22821f 56.94%,#165514 88.75%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+  pointer-events: none;
+}
+.search select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  appearance: none;
+  outline: none;
+  padding-right: 46px;
+  z-index: 1;
+}
+.search .providers-select-list::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg) translateY(-50%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.search select option {
+  background-color: #fff;
+  color: #000;
+}
+.search .search-box img {
+  width: 24px;
+}
+.search .search-box input {
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.search .search-box input::placeholder {
+  color: white;
+}
+
+/* Support Page */
+.logged-in.support {
+  min-height: 100vh;
+}
+
+/** Get Coin Page **/
+.get-coins-wrap {
+  width: 55%;
+  margin: auto;
+}
+.get-coins-wrap .row-content-top img {
+  width: 60px;
+  height: 40px;
+}
+.get-coins-wrap .row-content-top .item-left {
+  background: #4B0F78;
+  padding: 10px;
+}
+.get-coins-wrap .row-content-top .item-right {
+  background-image: linear-gradient(244.84deg,#f3ffc1 23.41%,#5ecd46 118.28%);
+  padding: 10px;
+}
+.get-coins-wrap .row-content-top .item-right a {
+  background: #4B0F78;
+  width: 127px;
+  color: #fff;
+}
+.get-coins-wrap .row-content-top .item-right p {
+  color: #4B0F78
+}
+.get-coins-wrap .gc-point, .get-coins-wrap .sc-point {
+  left: 50%;
+  right: -50%;
+  text-align: center; 
+  margin-bottom: 0;
+  transform: translateX(-50%) translateY(-0.25rem) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1) scaleY(1);
+}
+.get-coins-wrap .gc-point {
+  top: 54%;
+}
+.get-coins-wrap .sc-point {
+  top: 81.5%;
+}
+.get-coins-wrap .btn.pricebtn {
+  border: 1px solid #36B621;
+  border-radius: .25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.75rem;
+  padding: .6em;
+  margin-bottom: 1em;
+}
+.get-coins-wrap .btn.pricebtn:hover {
+  background: #fff;
+  border-color: #36B621;
+}    
+.get-coins-wrap .img-wrap {
+  background: #613C8D;
+}    
+.get-coins-wrap .close-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Coins Shop Page */
+.coins-shop-wrap .item-left .order-summary {
+  width: 55%;
+}
+.coins-shop-wrap .item-right a {
+  width: 18%;
+}
+.coins-shop-wrap .item-right img {
+  width: 100%;
+}
+.coins-shop-wrap .item-right p a {
+  color: rgb(140 52 252);
+}
+.coins-shop-wrap .gc-point, .coins-shop-wrap .sc-point {
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.coins-shop-wrap .gc-point {
+  top: 53%;
+}
+.coins-shop-wrap .sc-point {
+  top: 81%;
+}
+
+/* Common CSS for Transaction History & loggedOn Promotions Pages */
+.data-table {
+  width: 55%;
+  margin: auto;
+}
+.data-table table {
+  border-collapse: unset;
+}
+.dt-container .dt-length label {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 8px;
+  width: 100%;
+}
+.data-table select {
+  filter: brightness(0) invert(1);
+  padding: 0.5rem 5rem 0.5rem 6px !important
+}
+.data-table input {
+  outline: none;
+}
+.dt-container {
+  color: white;
+}
+.dt-container .dt-search label {
+  color: white;
+  font-weight: bold;
+}
+.dt-container .dt-search input {
+  border-color: #fff !important;
+}
+.data-table .dt-info {
+  font-weight: bold !important;
+}
+.data-table .dt-paging nav button.dt-paging-button {
+  cursor: pointer !important;
+}
+.data-table .dt-paging nav button.dt-paging-button:hover {
+  background: none; 
+}
+.data-table nav .first, .data-table nav .last, .data-table nav .current {
+  background-image: linear-gradient(128.03deg, #22821f 7.19%, #165514 97.03%) !important;
+  border: none !important;
+}
+.data-table nav .first:hover, .data-table nav .last:hover, .data-table nav .current:hover {
+  background-image: linear-gradient( 128.03deg, #165514 7.19%, #22821f 97.03% ) !important;
+}
+.dt-empty {
+  border: 1px solid #fff !important;
+}
+
+/*Css for Redeemprize Page*/
+.redeemprize .items {
+  width: 75%;
+  margin: auto;
+}
+.redeemContainer {
+  border: 1px solid white;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+.redeemHeader {
+  color: white;
+}
+.redeemHeader h3 {
+  margin-bottom: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.redeemContainer h4 {
+  font-family: "Montserrat", sans-serif;
+}
+.redeemContainer .textGray {
+  color: gray;
+}
+.redeemContainer .redeemBody {
+  color: white;
+  padding: 2rem 2rem 0 2rem;
+}
+.redeemContainer .redeemBody .bodyContent {
+  display: flex;
+  justify-content: space-between;
+}
+.redeemContainer .redeemBody .bodyContent .title {
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+.redeemContainer .redeemBody .bodyContent .goldCoins .content div {
+  border-radius: 30px;
+  border: 3px solid #d79e16;
+  text-align: right;
+  padding: 0.5rem 1rem;
+  min-width: 200px;
+}
+.redeemContainer .redeemBody .bodyContent .starsCoins .content div {
+  border-radius: 30px;
+  border: 3px solid #5ecd46;
+  text-align: right;
+  padding: 0.5rem 1rem;
+  min-width: 200px;
+}
+.redeemContainer .redeemBody .bodyContent .goldCoins .content {
+  position: relative;
+}
+.redeemContainer .redeemBody .bodyContent .starsCoins .content {
+  position: relative;
+}
+.redeemContainer .redeemBody .bodyContent .starsCoins .content .sCoin {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+}
+.redeemContainer .redeemBody .bodyContent .goldCoins .content .gCoin {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+}
+.redeemContainer .historyContainer {
+  border: 1px solid white;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+.redeemContainer #historyOptShow {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 2rem 0.5rem 0;
+  border-radius: 5px;
+}
+.redeemContainer #historyOptShow option {
+  color: black;
+}
+.redeemContainer #historyOptSearch {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem 2rem 0.5rem 0;
+  border-radius: 5px;
+}
+.redeemContainer .historyTable {
+  background-color: transparent !important;
+  --bs-table-bg: transparent !important;
+}
+.redeemContainer .historyTable th,
+.redeemContainer .historyTable td {
+  border: 1px solid white !important;
+  text-align: left !important;
+}
+.redeemContainer .historyTableContainer option {
+  color: black !important;
+}
+.redeemContainer .nav-link:hover .icon-img svg {
+  fill: #f12d83;
+}
+.redeemContainer .dataTablesSelect select {
+  padding: 0.5rem 5rem 0.5rem 0 !important;
+}
+.redeemContainer .redeemInputContainer {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redeemContainer .redeemInputContainer .currencyBox {
+  width: 80px;
+  height: 100%;
+  background-image: linear-gradient(128.03deg, #f12d83 7.19%, #5217a3 97.03%);
+}
+.redeemContainer .redeemInputContainer .availableBox {
+  width: 130px;
+  height: 100%;
+  background-image: linear-gradient(128.03deg, #f12d83 7.19%, #5217a3 97.03%);
+}
+.redeemContainer .redeemInputContainer input {
+  height: 100%;
+}
+.redeemContainer .bar {
+  width: 100%;
+  height: 1px;
+  background: silver;
+}
+.redeemContainer .accordion-button {
+  background: transparent;
+}
+.redeemContainer .accordion-button:focus {
+  box-shadow: none;
+  background: transparent;
+}
+.redeemContainer .accordion-item {
+  border: 0;
+  border-radius: 0 !important;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: transparent !important;
+}
+.redeemContainer .accordion-button::after {
+  background-image: url("/assets/images/chevron.webp");
+  background-position: center;
+  filter: brightness(1.8);
+}
+.redeemContainer .accordion-button:not(.collapsed)::after {
+  background-image: url("/assets/images/chevron.webp");
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+
+
+/*--- Responsive css --*/
+@media (max-width: 767px) {
+  .header-loggedon .nav-link {
+    background-image: none !important;
+    background-clip: text;
+    display: inline-block;
+  }
+  .mobile-logo {
+    margin-left: 30% !important;
+  }
+  .box-moneta {
+    margin-left: 5% !important;
+  }
+  .btn-logout {
+    margin-bottom: 100px !important;
+  }
+  .mobile-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #343434 !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  .mobile-menu .navbar-toggler {
+    display: block;
+  }
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  .mobile-menu a .icon {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .mobile-menu a:hover {
+    color: rgb(213, 156, 21);
+  }
+  .container-mobile-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: fit-content !important;
+  }
+  .container-mobile-menu span,
+  .container-mobile-menu a {
+    margin-top: 5px !important;
+    font-weight: 300;
+    font-size: 12px !important;
+  }
+  .btn-buy-mobile span,
+  .btn-buy-mobile a {
+    margin-top: 3px !important;
+    font-weight: 800;
+    font-size: 16px !important;
+  }
+  .container-mobile-menu img {
+    width: 20px;
+    height: 20px;
+  }
+  .btn-buy-mobile {
+    position: absolute;
+    background-color: #f8cb36;
+    padding: 15px;
+    top: -30px;
+    border-radius: 150px;
+  }
+  .navbar > .container {
+    padding: 0 !important;
+  }
+  .notification-icon {
+    display: none;
+  }
+  .header-loggedon .navbar-toggler {
+    display: none;
+  }
+  .header-loggedon {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .header-loggedon .offcanvas.offcanvas-end {
+    width: 100%;
+  }
+
+  .header-loggedon .accordion {
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .star-logo img {
+    width: 140px;
+  }
+
+  /* Footer Css */
+  .footer-inner {
+    padding: 60px 0 70px 0;
+  }
+
+  .text-big {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .banner-small-text p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .bold-text {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .desc-text,
+  .slot-desc,
+  .dive-in .small-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .banner-allgames {
+    background-image: url("../images/banner-game-mobile.png") !important;
+  }
+
+  .contacts h1 {
+    font-size: 1.5rem;
+  }
+
+  .spinvault-shopcoin {
+    max-width: 100%;
+  }
+
+  .spinvault-shopcoin .modal-content {
+    padding: 1em;
+  }
+
+  .spinvault-signin h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-common label, .form-common input, .form-common select {
+    font-size: 1.2rem;
+  }
+
+  .form-common input[type="checkbox"] {
+    width: 22px;
+    height: 20px;
+  }
+
+  .redeem-input-field {
+    margin: 20px 0 20px 0 !important;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .section-2-button {
+    margin: 0 0 20px 0 !important;
+    padding: 10px 0;
+    width: 100% !important;
+  }
+
+  .custom-text-size {
+    font-size: 1rem !important;
+  }
+
+  .game-list {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .star-section {
+    min-height: 130px;
+  }
+  .game-image img {
+    width: 100%;
+    height: 120px;
+  }
+  .game-image .overlay {
+    width: 88%;
+  }
+  .game-image .overlay .btn-gradient {
+    font-size: 10px;
+  }
+  .banner-signup-btn {
+    width: 80%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .logged-in.support {
+    min-height: 115vh;
+  }
+
+  /* Search Page */
+  .search .items {
+    width: 100%;
+  }
+  .search .providers-select-list::after {
+    top: 15px;
+    width: 14px;
+    height: 14px;
+  }
+  .search .search-box img {
+    width: 21px;
+  }
+  /* recovery-password */
+  .account-recovery-password .items {
+    width: 100%; 
+  }
+  /** Get Coin Page Mobile **/
+  .get-coins-wrap .modal-content {
+    padding: 1em;
+  } 
+  .get-coins-wrap .gc-point, .get-coins-wrap .sc-point {
+    font-size: 12px;
+  }
+
+  /*Css for Redeemprize Page*/
+  .redeemContainer {
+    border: unset;
+    padding: unset;
+  }
+  .redeemContainer .redeemBody {
+    padding: 2rem 0 0 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktop-login {
+    margin-left: auto !important;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .purchase-wrapper {
+    padding-top: 3rem;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .hero-section-rightimg .purchase-wrapper {
+    order: 2;
+    padding-bottom: 2em;
+  }
+
+  .purchase-desc {
+    margin: 0 30px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .slot-banner .bold-text {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .slot-banner .small-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .slot-top-banner .right-section img {
+    width: 360px;
+  }
+
+  .slot-top-banner .right-section {
+    top: -105px;
+  }
+
+  /* Coins Shop Page */
+  .coins-shop-wrap .item-left .order-summary {
+    width: 100%;
+  }
+
+  /* Common Promotions, Transaction History, Redeemd Prize Page */
+  .data-table {
+    width: 100%;
+  }
+
+  /*Css for Redeemprize Page*/
+  .redeemprize .items {
+    width: 100%;
+  }
+
+  /** Get Coin Page Mobile **/
+  .get-coins-wrap {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .about-subtitle {
+    font-size: 24px;
+  }
+
+  .about-title {
+    font-size: 32px !important;
+  }
+
+  .about-p {
+    font-size: 16px !important;
+  }
+
+  .custom-width {
+    width: 100%;
+  }
+
+  .banner-allgames .banner-right-image {
+    right: 30%;
+  }
+
+  .banner-allgames .banner-right-image img {
+    width: 360px;
+    height: 242px;
+    object-fit: contain;
+  }
+
+  .form-common .items {
+    width: 100%;
+  }
+}
+
+.header-loggedon {
+  position: sticky;
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+  background-color: #000; /* Cambia il colore di sfondo come necessario */
+  padding-top: 0px !important;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.offcanvas {
+  top: 100px; /* Assicurati che l'offcanvas non si sovrapponga all'header fisso */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #343434; /* Cambia il colore di sfondo come necessario */
+}
+
+.header-loggedon .navbar {
+  padding: 1rem 0.5rem;
+  background-color: #343434;
+  margin-bottom: 1rem;
+}
+
+.offcanvas {
+  top: 80px; /* Assicurati che l'offcanvas non si sovrapponga all'header fisso */
+}
+
+.navbar .bg-black {
+  padding-top: 0px;
+}
+
+.minilogo-sidebar {
+  position: absolute;
+  left: -45px;
+  top: -6px;
+}
+.btn-sidebar a {
+  border: 3px solid #f8cb36 !important;
+}
+.btn-logout {
+  width: fit-content;
+  margin: 0 auto;
+}
+.btn-logout a {
+  margin: 0;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 10px 45px;
+}
+
+.box-moneta {
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+  width: 270px;
+  justify-content: end;
+}
+
+.icona-moneta {
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s !important;
+  transform: translateX(-20px);
+  z-index: 1;
+}
+
+.valore-moneta {
+  font-size: 16px;
+}
+.header-games-play .valore-moneta {
+  filter: blur(3px);
+} 
+.header-games-play .box-moneta {
+  pointer-events: none;
+}
+#coin-box.active {
+  border: 2px solid #00ff00;
+  color: #00ff00;
+}
+
+#coin-box.active .icona-moneta {
+  transform: translateX(25px);
+}
+
+#coin-box.inactive {
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+#coin-box.inactive .icona-moneta {
+  transform: translateX(-20px);
+}
+.binario {
+  position: absolute;
+  bottom: 40%;
+  left: 20px;
+  right: 10px;
+  height: 7px;
+  background-color: #555;
+  border-radius: 20px;
+  width: 35px;
+  z-index: 0;
+}
+
+/*LiveChat*/
+#chat-widget-container {
+  position: absolute !important;
+  margin: auto;
+  left: 0 !important;
+  bottom: unset !important;
+  top: 200px;
+  z-index: 1 !important;
+}
+#chat-widget-minimized {
+  right: 0;
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  top: 0;
+}

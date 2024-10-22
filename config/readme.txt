@@ -1,0 +1,1 @@
+# Add config.php and database.php file inside this folder.
